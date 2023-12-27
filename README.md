@@ -1,7 +1,6 @@
 # ECE4820J-FA23
 *A collection of materials and self-written solutions for the course Introduction to Operating System (ECE4820J-FA23) in UM-SJTU JI (University of Michigan - Shanghai Jiao Tong University, Joint Institute), taught by prof. Manuel Charlemagne.*
 
-![visitor badge](https://visitor-badge.glitch.me/badge?page_id=Matrixpecker.VE482-public&left_color=gray&right_color=blue)
 
 ## Overview
 ### Lab
