@@ -1,0 +1,29 @@
+This file is for us p3 group to take down some basic knowledge in this project.
+
+# 1. Minix 3 processes
+
+## 1.1 Process
+
+1. process struct location: p3/p3team-02/kernel/proc.h
+2. The default kernel policy is relatively simple and is applied only when the process' `p_scheduler` pointer is set to NULL.
+```C
+struct proc *p_scheduler;	/* who should get out of quantum msg */
+/* test whether the process is scheduled by the kernel's default policy  */
+#define proc_kernel_scheduler(p)	((p)->p_scheduler == NULL || \
+					(p)->p_scheduler == (p))
+```
+3. Then it will call `static void notify_scheduler(struct proc *p)` in p3/p3team-02/kernel/proc.c
+4. `m_no_quantum` is sent
+5. `mini_send` using ipc `p3/p3team-02/kernel/ipc.h`
+
+## 1.2 Where to modify
+
+1. The main structure in `proc.c` can be maintained
+2. `pick_proc` in `proc.c` is the function to pick the next process to run
+3. Also, `enqueue`, `enqueue_head`, `dequeue` should be modified a little bit.
+
+## 1.3 Strategies
+
+1. The priority of the process is from 0 to 15.
+2. The process of priority i can get 2^(15-i) tickets.
+3. Randomly pick a ticket and find the process with the ticket.
