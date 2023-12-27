@@ -52,3 +52,8 @@ If there is similar course materials assigned in the future, it is the responsib
 
 ## Contribution
 Help yourself to [raise any issues](https://github.com/unitem/ECE4820J_Operating_System/issues) if you find any mistake in the solution.
+
+## Docs
+
+For more documentations and instructions, see wiki https://github.com/unitem/ECE4820J_Operating_System/wiki
+
